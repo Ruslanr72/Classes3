@@ -3,6 +3,7 @@ import java.util.Objects;
 public class Book {
     private String bookName;
     private   int bookYear;
+    private Author author;
 
 
     public Book (String bookName, int bookYear) {
@@ -18,11 +19,12 @@ public class Book {
     }
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass() || this.getClass() == null) {
+        if (this.getClass() != other.getClass() || other == null) {
             return false;
         }
-        Book workbook = (Book) other;
-        return workbook.equals(workbook.bookName) && workbook.equals(workbook.bookYear);
+        Book bookName = (Book) other;
+        Book bookYear = (Book) other;
+        return this.bookName.equals(bookName.bookName)&& bookYear.equals(bookYear.bookYear);
     }
 
     @Override
@@ -31,7 +33,7 @@ public class Book {
     }
     @Override
     public String toString() {
-        return "Book name is -  " + bookName + ". " + "\nThe book year is - " + bookYear + ".";
+        return "Book name is -  " + bookName + ". " + "\nThe book year is - " + bookYear + "." + author;
     }
 }
 
