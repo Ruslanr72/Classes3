@@ -10,8 +10,8 @@ public class Main {
         System.out.println("\n====================");
 
         Book secondWorkbook = new  Book("Second Workbook", 2001);
-        Author authorOfSecondWorkbook = new Author("Muslimova", "Elvira");
-        System.out.println(secondWorkbook + "\n" + authorOfSecondWorkbook);
+        Author authorOfSecondBook = new Author("Muslimova", "Elvira");
+        System.out.println(secondWorkbook + "\n" + authorOfSecondBook);
         secondWorkbook.setBookYear(2020);
         System.out.println("Set year of book is -  " + secondWorkbook.getBookYear());
     }

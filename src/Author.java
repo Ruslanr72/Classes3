@@ -11,6 +11,10 @@ public class Author {
          this.authorName = authorName;
     }
 
+    public Author() {
+
+    }
+
     public String getAuthorName() {
         return this.authorName;
     }
@@ -18,6 +22,7 @@ public class Author {
     public String getAuthorSurname() {
         return this.authorSurname;
     }
+
 
     @Override
     public boolean equals(Object other) {
@@ -32,7 +37,7 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorName, authorSurname);
+        return Objects.hash(this.authorName, this.authorSurname);
     }
 
     @Override
