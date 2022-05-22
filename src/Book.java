@@ -31,7 +31,7 @@ public class Book {
             return false;
         }
         Book bookName = (Book) other;
-        return this.bookName.equals(bookName.bookYear);
+        return this.bookName.equals(bookName.bookName) && this.bookYear == bookYear && author == author;
     }
 
     @Override
