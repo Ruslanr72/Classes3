@@ -15,6 +15,9 @@ public class Book {
     public int getBookYear(){
         return this.bookYear;
     }
+    public Author getAuthor(){
+        return this.author;
+    }
 
     public String getBookName() {
         return this.bookName;
@@ -24,13 +27,11 @@ public class Book {
     }
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass() || other.getClass() == null) {
+        if (this.getClass() != other.getClass() || other == null) {
             return false;
         }
         Book bookName = (Book) other;
-        Book bookYear = (Book) other;
-        Book author = (Book) other;
-        return this.bookName.equals(bookName.bookName)&& bookYear.equals(bookYear.bookYear) && this.author.equals(author.author);
+        return this.bookName.equals(bookName.bookName);
     }
 
     @Override
